@@ -377,67 +377,76 @@ class _Nav extends State<Nav> {
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Align(
-        alignment: Alignment(0, 0.92),
-        child: FloatingActionButton(
-          onPressed: () {
-            setState(() {
-              currentScreen = Announcement();
-              Tab = 4;
-            });
-          },
-          elevation: 0,
-          child: Container(
-              height: 70,
-              width: 70,
-              decoration: BoxDecoration(
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.2),
-                    blurRadius: 6,
-                  ),
-                ],
-                borderRadius: BorderRadius.circular(90),
-                gradient: LinearGradient(
-                  colors: [
-                    const Color(0xff0da6c2),
-                    const Color(0xff42c98d),
-                    const Color(0xff57d77a)
-                  ],
-                ),
+      floatingActionButton: Stack(
+        children: [
+          Positioned(
+            right: 10,
+            child: Align(
+              alignment: Alignment(0, 0.92),
+              child: FloatingActionButton(
+                onPressed: () {
+                  setState(() {
+                    currentScreen = Announcement();
+                    Tab = 4;
+                  });
+                },
+                elevation: 0,
+                child: Container(
+                    height: 70,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.2),
+                          blurRadius: 6,
+                        ),
+                      ],
+                      borderRadius: BorderRadius.circular(90),
+                      gradient: LinearGradient(
+                        colors: [
+                          const Color(0xff0da6c2),
+                          const Color(0xff42c98d),
+                          const Color(0xff57d77a)
+                        ],
+                      ),
+                    ),
+                    child: Align(
+                      alignment: Alignment(0.30, -0.10),
+                      child: new Wrap(
+                        children: [
+                          Column(children: [
+                            SizedBox(
+                              height: 11,
+                            ),
+                            Image.asset(
+                              "assets/images/announ.png",
+                              width: 35,
+                              height: 35,
+                              color: Tab == 4
+                                  ? Color(0xff42c98d)
+                                  : Color.fromARGB(255, 255, 254, 254),
+                            ),
+                            SizedBox(
+                              height: 17,
+                            ),
+                            Text(
+                              'الرئيسية',
+                              style: TextStyle(
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                  color: Tab == 4
+                                      ? Color(0xff42c98d)
+                                      : Colors.grey),
+                            ),
+                          ]),
+                        ],
+                      ),
+                    )),
+                backgroundColor: Colors.transparent,
               ),
-              child: Align(
-                alignment: Alignment(0.30, -0.10),
-                child: new Wrap(
-                  children: [
-                    Column(children: [
-                      SizedBox(
-                        height: 11,
-                      ),
-                      Image.asset(
-                        "assets/images/announ.png",
-                        width: 35,
-                        height: 35,
-                        color: Tab == 4
-                            ? Color(0xff42c98d)
-                            : Color.fromARGB(255, 255, 254, 254),
-                      ),
-                      SizedBox(
-                        height: 17,
-                      ),
-                      Text(
-                        'الرئيسية',
-                        style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w700,
-                            color: Tab == 4 ? Color(0xff42c98d) : Colors.grey),
-                      ),
-                    ]),
-                  ],
-                ),
-              )),
-          backgroundColor: Colors.transparent,
-        ),
+            ),
+          )
+        ],
       ),
       //   floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
