@@ -13,6 +13,7 @@ class _Announcement extends State<Announcement> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(252, 253, 255, 1),
       body: Center(child: Text('Announcement')),
     );
   }

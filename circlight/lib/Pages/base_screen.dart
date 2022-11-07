@@ -24,7 +24,7 @@ class _BaseScreenState extends State<BaseScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 58, 107, 206),
+      backgroundColor: Color.fromRGBO(252, 253, 255, 1),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

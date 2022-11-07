@@ -13,6 +13,7 @@ class _MyWidgetState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color.fromRGBO(252, 253, 255, 1),
         appBar: AppBar(backgroundColor: Colors.white, title: Text('Chat')),
         body: Center(
           child: Text('Chat Screen', style: TextStyle(fontSize: 40)),

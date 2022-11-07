@@ -9,7 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'dart:convert';
 
 import 'package:circlight/Pages/Parent.dart';
-import 'package:circlight/Pages/AdminHome.dart';
+
 import 'package:circlight/Pages/DashBoard.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -174,7 +174,6 @@ class _EditStudentState extends State<EditStudent>
     int Tab = 0;
     final List<Widget> Screens = [
       Search(),
-      AdminHome(),
       Requests(),
       DashBoard(),
       Announcement(),
@@ -251,6 +250,7 @@ class _EditStudentState extends State<EditStudent>
         break;
     }
     return Scaffold(
+        backgroundColor: Color.fromRGBO(252, 253, 255, 1),
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: Row(
@@ -380,7 +380,6 @@ class _EditStudentState extends State<EditStudent>
           backgroundColor: Color(0xFFffffff),
         ),
         key: _scaffoldKey,
-        backgroundColor: Color(0xFFffffff),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -678,11 +677,11 @@ class _EditStudentState extends State<EditStudent>
 
   GetMainPage(height, isSaved) {
     return Scaffold(
+        backgroundColor: Color.fromRGBO(252, 253, 255, 1),
         extendBodyBehindAppBar: true,
         key: _scaffoldKey,
         // appBar: AppBar(title: Text("Faten")),
 
-        backgroundColor: Color(0xFFffffff),
         body: NotificationListener<ScrollNotification>(
             onNotification: _scrollListener,
             child: Container(

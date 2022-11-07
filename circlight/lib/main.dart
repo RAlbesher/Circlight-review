@@ -12,12 +12,9 @@ import 'package:circlight/Pages/firebase_options.dart';
 import 'package:circlight/Pages/Nav.dart';
 import 'Pages/CreateStudent.dart';
 
-import 'Pages/appbar.dart';
-
 import 'Pages/base_screen.dart';
 import 'Pages/edit5.dart';
 import 'Pages/editStudent.dart';
-import 'Pages/hommme.dart';
 
 Future main() async {
 //start of firebase connection
@@ -52,7 +49,7 @@ class LoginUiApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // title: 'Flutter Login UI',
-      title: 'Flutter Auth',
+      title: 'Circlight',
       theme: ThemeData(
         fontFamily: 'Poppins',
         primaryColor: _primaryColor,
@@ -86,43 +83,16 @@ class LoginUiApp extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        /*  inputDecorationTheme: const InputDecorationTheme(
-          filled: true,
-          fillColor: kPrimaryLightColor,
-          iconColor: kPrimaryColor,
-          prefixIconColor: kPrimaryColor,
-          contentPadding: EdgeInsets.symmetric(
-              horizontal: defaultPadding, vertical: defaultPadding),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(30)),
-            borderSide: BorderSide.none,
-          ),
-        ),*/
       ),
-      /* home: editparent6(
-            Confirm: false,
-            Index: 1,
-            documentId: "21AqxvymlaHWM4DfLFtS",
-            whichpag: 0,
-            TheValue: "")*/
-      //  home: StudentAddform(
-      //    documentId: "GpRfqodKgYCqobAL2r6w",
-      //   ),
 
-      /*home: editparent5(
-          Confirm: false,
-          Index: 1,
-          TheValue: "",
-          documentId: "Cu5WEwZNoe5eqIl0NOJp",
-          whichpag: 0,
-      //    DropDown: false),*/
-      // home: Nav(
-      //   documentId: "Cu5WEwZNoe5eqIl0NOJp",
-      //   TabValue: 0,
-      // ),
-      //   home: MyHomePage(),
-
-      home: const WelcomeScreen(),
+      home: EditStudent(
+        Confirm: false,
+        DropDown: false,
+        Index: 1,
+        TheValue: "",
+        documentId: "4xWCPsIXJmFV4Qy8X2oo",
+        whichpag: 0,
+      ),
     );
   }
 }

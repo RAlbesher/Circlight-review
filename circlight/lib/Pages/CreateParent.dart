@@ -170,6 +170,7 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
     getUserName();
     getAdminID();
     return Scaffold(
+      backgroundColor: Color.fromRGBO(252, 253, 255, 1),
       // floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       // appBar: AppBar(title: Text("Faten")),
       body: NotificationListener<ScrollNotification>(
@@ -822,7 +823,7 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
                           decoration: BoxDecoration(
                             border: Border(
                               bottom: BorderSide(
-                                  width: 1.0, color: const Color(0xff57d77a)),
+                                  width: 0.5, color: const Color(0xff57d77a)),
                             ),
                           ),
                           alignment: Alignment.center,
@@ -866,7 +867,7 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
                                           Container(
                                             alignment: Alignment.centerRight,
                                             padding: EdgeInsets.only(
-                                              left: 120,
+                                              left: 75,
                                             ),
                                             // child: Padding(
                                             //  padding: const EdgeInsets.only(
@@ -877,9 +878,10 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
                                               child: Row(children: [
                                                 Text(
                                                   style: GoogleFonts.poppins(
-                                                      fontSize: 14,
-                                                      color: const Color(
-                                                          0xff57d77a)),
+                                                    fontSize: 14,
+                                                    color:
+                                                        const Color(0xff57d77a),
+                                                  ),
                                                   'صلة القرابة',
                                                   maxLines: 2,
                                                   textAlign: TextAlign.right,
@@ -917,10 +919,13 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     CupertinoButton(
-                                      child: Text("إلغاء",
-                                          style: TextStyle(
-                                              color: Color(0xffA7A7A7),
-                                              fontSize: 16)),
+                                      child: Text(
+                                        "إلغاء",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 17,
+                                          color: Color(0xffA7A7A7),
+                                        ),
+                                      ),
                                       onPressed: () {
                                         Navigator.pop(context);
                                       },
@@ -950,9 +955,9 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
                                     ),
                                     CupertinoButton(
                                       child: Text("موافق",
-                                          style: TextStyle(
-                                              color: const Color(0xff57d77a),
-                                              fontSize: 16)),
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 17,
+                                              color: const Color(0xff57d77a))),
                                       onPressed: () {
                                         isshowadd = false;
                                         scrollController =
@@ -1333,79 +1338,130 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
             ),
             const SizedBox(
               height: 50,
+            ), ////////////
+
+            const SizedBox(
+              height: 67,
             ),
-            Row(
-              children: [
-                Text("            "),
-                const SizedBox(
-                  width: 100,
-                ),
-                const SizedBox(
-                  width: 100,
-                ),
-                const SizedBox(
-                  width: 100,
-                ),
-                Align(
-                  alignment: Alignment(0.99, 0.9),
-                  child: Container(
-                    height: 40.0,
-                    width: 40.0,
-                    child: FittedBox(
-                      child: FloatingActionButton(
-                        onPressed: () async {
-                          if (formKey.currentState!.validate()) {
-                            setState(() {
-                              isshowadd = true;
-                            });
-                            Navigator.of(context).push(CupertinoPageRoute(
-                              builder: (context) => Nav(
-                                TabValue: 7,
-                                documentId: "Cu5WEwZNoe5eqIl0NOJp",
-                                index: 2,
-                                Realtion: value,
-                                Name: widget.Name,
-                                username: widget.username,
-                                email: widget.email,
-                                phone1: phoneNumber.text,
-                                phone2: altphoneNumber.text,
-                                header: false,
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              issahre
+                  ? Align(
+                      alignment: Alignment(0.99, 0.9),
+                      child: Container(
+                        height: 40.0,
+                        width: 40.0,
+                        child: FittedBox(
+                          child: FloatingActionButton(
+                            onPressed: () async {
+                              setState(() {
+                                showno = false;
+                              });
+
+                              await showCupertinoDialog(
+                                  context: context, builder: share1);
+                            },
+                            elevation: 0,
+                            child: Container(
+                              height: 70,
+                              width: 70,
+                              decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withOpacity(0.2),
+                                    blurRadius: 6,
+                                  ),
+                                ],
+                                borderRadius: BorderRadius.circular(90),
+                                gradient: LinearGradient(
+                                  colors: [
+                                    const Color(0xff0da6c2),
+                                    const Color(0xff57d77a)
+                                  ],
+                                ),
                               ),
-                            ));
-                          }
-                          //  if (formKey.currentState!.validate()) {}
-                        },
-                        elevation: 0,
-                        child: Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.2),
-                                blurRadius: 6,
+                              child: Center(
+                                child: Text(
+                                  "مشاركة",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ),
-                            ],
-                            borderRadius: BorderRadius.circular(90),
-                            gradient: LinearGradient(
-                              colors: [
-                                const Color(0xff0da6c2),
-                                const Color(0xff57d77a)
-                              ],
                             ),
-                          ),
-                          child: Icon(
-                            Icons.arrow_forward_outlined,
-                            color: Colors.white,
+                            backgroundColor: Color.fromARGB(0, 255, 253, 253),
                           ),
                         ),
-                        backgroundColor: Color.fromARGB(0, 255, 253, 253),
                       ),
+                    )
+                  : Text(""),
+              const SizedBox(
+                width: 100,
+              ),
+              const SizedBox(
+                width: 100,
+              ),
+              const SizedBox(
+                width: 100,
+              ),
+              Align(
+                alignment: Alignment(-0.99, 0.9),
+                child: Container(
+                  height: 40.0,
+                  width: 40.0,
+                  child: FittedBox(
+                    child: FloatingActionButton(
+                      onPressed: () {
+                        if (formKey.currentState!.validate()) {
+                          Navigator.of(context).push(CupertinoPageRoute(
+                            builder: (context) => Nav(
+                              TabValue: 7,
+                              documentId: "Cu5WEwZNoe5eqIl0NOJp",
+                              index: 1,
+                              Realtion: value,
+                              Name: widget.Name,
+                              username: widget.username,
+                              email: widget.email,
+                              phone1: phoneNumber.text,
+                              phone2: altphoneNumber.text,
+                              header: false,
+                            ),
+                          ));
+                          //  if (formKey.currentState!.validate()) {}
+                        }
+                      },
+                      elevation: 0,
+                      child: Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.2),
+                              blurRadius: 6,
+                            ),
+                          ],
+                          borderRadius: BorderRadius.circular(90),
+                          gradient: LinearGradient(
+                            colors: [
+                              const Color(0xff0da6c2),
+                              const Color(0xff57d77a)
+                            ],
+                          ),
+                        ),
+                        child: Icon(
+                          Icons.arrow_forward_outlined,
+                          color: Colors.white,
+                        ),
+                      ),
+                      backgroundColor: Color.fromARGB(0, 255, 253, 253),
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ]),
+
+            //////////////////////////
+
             /*  TextFieldWidget(
                               'Name', Icons.person_outlined, parentName,
                               (String? input) {
@@ -1441,57 +1497,6 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
                       return;
                     }
                   }),*/
-
-            issahre
-                ? Align(
-                    alignment: Alignment(-0.99, 0.2),
-                    child: Container(
-                      height: 50.0,
-                      width: 50.0,
-                      child: FittedBox(
-                        child: FloatingActionButton(
-                          onPressed: () async {
-                            setState(() {
-                              showno = false;
-                            });
-
-                            await showCupertinoDialog(
-                                context: context, builder: share1);
-                          },
-                          elevation: 0,
-                          child: Container(
-                            height: 70,
-                            width: 70,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.2),
-                                  blurRadius: 6,
-                                ),
-                              ],
-                              borderRadius: BorderRadius.circular(90),
-                              gradient: LinearGradient(
-                                colors: [
-                                  const Color(0xff0da6c2),
-                                  const Color(0xff57d77a)
-                                ],
-                              ),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "مشاركة",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                          ),
-                          backgroundColor: Color.fromARGB(0, 255, 253, 253),
-                        ),
-                      ),
-                    ),
-                  )
-                : SizedBox(),
           ],
         );
         break;
@@ -1551,7 +1556,14 @@ class _CreateState extends State<Createparent5> with TickerProviderStateMixin {
                       "\nالرقم السري:" +
                       k.toString());
 
-              Navigator.pop(context);
+              Future.delayed(const Duration(milliseconds: 1500)).then((value) {
+                Navigator.of(context).push(CupertinoPageRoute(
+                  builder: (context) => Nav(
+                    TabValue: 10,
+                    documentId: "",
+                  ),
+                ));
+              });
             },
             child: const Text("نعم",
                 style: TextStyle(

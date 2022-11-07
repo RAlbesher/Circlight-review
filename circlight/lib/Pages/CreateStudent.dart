@@ -140,6 +140,7 @@ class _CreateStudentState extends State<CreateStudent>
         FirebaseFirestore.instance.collection("Student");
 
     return Scaffold(
+      backgroundColor: Color.fromRGBO(252, 253, 255, 1),
       // floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       // appBar: AppBar(title: Text("Faten")),
       body: NotificationListener<ScrollNotification>(
@@ -698,7 +699,7 @@ class _CreateStudentState extends State<CreateStudent>
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 10,
             ),
             Center(
               child: new Wrap(
@@ -709,7 +710,10 @@ class _CreateStudentState extends State<CreateStudent>
                     CupertinoButton(
                       child: Expanded(
                         child: Container(
+                          width: 307,
+                          margin: EdgeInsets.only(right: 20),
                           // padding:
+                          //width: 300,
                           // padding: EdgeInsets.only(right: 4),
                           //   EdgeInsets.symmetric(horizontal: 120),
                           decoration: BoxDecoration(
@@ -727,7 +731,7 @@ class _CreateStudentState extends State<CreateStudent>
                                     children: <Widget>[
                                       Container(
                                         alignment: Alignment.center,
-                                        padding: EdgeInsets.only(right: 4),
+                                        // padding: EdgeInsets.only(right: 4),
                                         child: Positioned(
                                           left: 0,
                                           child: Icon(
@@ -741,8 +745,9 @@ class _CreateStudentState extends State<CreateStudent>
                                       Align(
                                         alignment: Alignment.centerLeft,
                                         child: Container(
+                                          width: 22,
                                           alignment: Alignment.center,
-                                          padding: EdgeInsets.only(right: 120),
+                                          //  padding: EdgeInsets.only(right: 120),
                                           child: Text(
                                             style: GoogleFonts.poppins(
                                                 fontSize: 14,
@@ -754,10 +759,13 @@ class _CreateStudentState extends State<CreateStudent>
                                           ),
                                         ),
                                       ),
+                                      SizedBox(
+                                        width: 170,
+                                      ),
                                       Row(children: [
                                         Text(
                                           style: GoogleFonts.poppins(
-                                              fontSize: 14,
+                                              fontSize: 17,
                                               color: const Color(0xff57d77a)),
                                           'صف الطالب',
                                           maxLines: 2,
@@ -790,10 +798,13 @@ class _CreateStudentState extends State<CreateStudent>
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     CupertinoButton(
-                                      child: Text("إلغاء",
-                                          style: TextStyle(
-                                              color: Color(0xffA7A7A7),
-                                              fontSize: 16)),
+                                      child: Text(
+                                        "إلغاء",
+                                        style: GoogleFonts.poppins(
+                                          fontSize: 17,
+                                          color: Color(0xffA7A7A7),
+                                        ),
+                                      ),
                                       onPressed: () {
                                         Navigator.pop(context);
                                       },
@@ -858,6 +869,7 @@ class _CreateStudentState extends State<CreateStudent>
                     CupertinoButton(
                       child: Expanded(
                         child: Container(
+                          width: 307,
                           // padding:
                           // padding: EdgeInsets.only(right: 4),
                           //   EdgeInsets.symmetric(horizontal: 120),
@@ -903,6 +915,9 @@ class _CreateStudentState extends State<CreateStudent>
                                           ),
                                         ),
                                       ),
+                                      SizedBox(
+                                        width: 53,
+                                      ),
                                       Row(children: [
                                         Text(
                                           style: GoogleFonts.poppins(
@@ -939,7 +954,7 @@ class _CreateStudentState extends State<CreateStudent>
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
                                     CupertinoButton(
-                                      child: Text("إالغاء",
+                                      child: Text("لغاء",
                                           style: TextStyle(
                                               color: Color(0xffA7A7A7),
                                               fontSize: 16)),
@@ -1050,7 +1065,7 @@ class _CreateStudentState extends State<CreateStudent>
                   width: 100,
                 ),
                 Align(
-                  alignment: Alignment(0.99, 0.9),
+                  alignment: Alignment(0.80, 0.9),
                   child: Container(
                     height: 40.0,
                     width: 40.0,
@@ -1140,8 +1155,9 @@ class _CreateStudentState extends State<CreateStudent>
                         ))),
             child: Text("موافق",
                 style: TextStyle(
-                    color: const Color(0xff57d77a),
-                    fontWeight: FontWeight.bold))),
+                  color: const Color(0xff57d77a),
+                  fontWeight: FontWeight.bold,
+                ))),
       ],
     );
   }

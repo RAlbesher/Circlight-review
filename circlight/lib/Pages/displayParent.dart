@@ -115,8 +115,9 @@ class _Paretdisplay extends State<Paretdisplay> with TickerProviderStateMixin {
                                       color: Color.fromARGB(255, 255, 244, 244),
                                       boxShadow: [
                                         BoxShadow(
-                                          color: Color(0xff57d77a)
-                                              .withOpacity(0.2),
+                                          color:
+                                              Color.fromARGB(255, 198, 210, 201)
+                                                  .withOpacity(0.4),
                                           spreadRadius: 5,
                                           blurRadius: 7,
                                           offset: Offset(0,
@@ -127,8 +128,8 @@ class _Paretdisplay extends State<Paretdisplay> with TickerProviderStateMixin {
                                     child: Center(
                                         child: Icon(
                                       Icons.add,
-                                      size: 20,
-                                      color: Color(0xff57d77a).withOpacity(0.4),
+                                      size: 28,
+                                      color: Color(0xff57d77a).withOpacity(0.9),
                                     )),
                                   ),
                                   onTap: () {
@@ -281,8 +282,8 @@ class _Paretdisplay extends State<Paretdisplay> with TickerProviderStateMixin {
                                                     child: Text(
                                                       snap[index]['Name'],
                                                       style: const TextStyle(
-                                                        color:
-                                                            Color(0xff0da6c2),
+                                                        color: const Color(
+                                                            0xff0da6c2),
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
