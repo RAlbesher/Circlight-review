@@ -1746,11 +1746,13 @@ class _editState extends State<editparent5> with TickerProviderStateMixin {
                                                   CrossAxisAlignment.start,
                                               children: <Widget>[
                                                 CupertinoButton(
-                                                  child: Text("إلغاء",
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xffA7A7A7),
-                                                          fontSize: 16)),
+                                                  child: Text(
+                                                    "إلغاء",
+                                                    style: GoogleFonts.poppins(
+                                                      fontSize: 17,
+                                                      color: Color(0xffA7A7A7),
+                                                    ),
+                                                  ),
                                                   onPressed: () {
                                                     Navigator.pop(context);
                                                   },
@@ -1786,10 +1788,10 @@ class _editState extends State<editparent5> with TickerProviderStateMixin {
                                                 ),
                                                 CupertinoButton(
                                                   child: Text("موافق",
-                                                      style: TextStyle(
+                                                      style: GoogleFonts.poppins(
+                                                          fontSize: 17,
                                                           color: const Color(
-                                                              0xff57d77a),
-                                                          fontSize: 16)),
+                                                              0xff57d77a))),
                                                   onPressed: () {
                                                     scrollController =
                                                         FixedExtentScrollController(

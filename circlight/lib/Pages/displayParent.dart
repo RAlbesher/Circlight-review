@@ -155,6 +155,7 @@ class _Paretdisplay extends State<Paretdisplay> with TickerProviderStateMixin {
                               ),
                             ),
                             Container(
+                              height: 200,
                               padding: EdgeInsets.only(
                                   right: 20, top: 153, left: 100),
                               child: Directionality(

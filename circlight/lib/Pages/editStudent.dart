@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:circlight/Pages/displayStudent.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -1047,6 +1049,7 @@ class _EditStudentState extends State<EditStudent>
                                 CupertinoButton(
                                   child: Expanded(
                                     child: Container(
+                                      width: 315,
                                       // padding:
                                       // padding: EdgeInsets.only(right: 4),
                                       //   EdgeInsets.symmetric(horizontal: 120),
@@ -1107,6 +1110,9 @@ class _EditStudentState extends State<EditStudent>
                                                       ),
                                                     ),
                                                   ),
+                                                  SizedBox(
+                                                    width: 90,
+                                                  ),
                                                   Row(children: [
                                                     Text(
                                                       style: GoogleFonts.poppins(
@@ -1148,11 +1154,13 @@ class _EditStudentState extends State<EditStudent>
                                                   CrossAxisAlignment.start,
                                               children: <Widget>[
                                                 CupertinoButton(
-                                                  child: Text("إلغاء",
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xffA7A7A7),
-                                                          fontSize: 16)),
+                                                  child: Text(
+                                                    "إلغاء",
+                                                    style: GoogleFonts.poppins(
+                                                      fontSize: 17,
+                                                      color: Color(0xffA7A7A7),
+                                                    ),
+                                                  ),
                                                   onPressed: () {
                                                     Navigator.pop(context);
                                                   },
@@ -1188,10 +1196,10 @@ class _EditStudentState extends State<EditStudent>
                                                 ),
                                                 CupertinoButton(
                                                   child: Text("موافق",
-                                                      style: TextStyle(
+                                                      style: GoogleFonts.poppins(
+                                                          fontSize: 17,
                                                           color: const Color(
-                                                              0xff57d77a),
-                                                          fontSize: 16)),
+                                                              0xff57d77a))),
                                                   onPressed: () {
                                                     scrollController =
                                                         FixedExtentScrollController(
@@ -1234,6 +1242,7 @@ class _EditStudentState extends State<EditStudent>
                                 CupertinoButton(
                                   child: Expanded(
                                     child: Container(
+                                      width: 313,
                                       // padding:
                                       // padding: EdgeInsets.only(right: 4),
                                       //   EdgeInsets.symmetric(horizontal: 120),
@@ -1294,6 +1303,9 @@ class _EditStudentState extends State<EditStudent>
                                                       ),
                                                     ),
                                                   ),
+                                                  SizedBox(
+                                                    width: 80,
+                                                  ),
                                                   Row(children: [
                                                     Text(
                                                       style: GoogleFonts.poppins(
@@ -1335,11 +1347,13 @@ class _EditStudentState extends State<EditStudent>
                                                   CrossAxisAlignment.start,
                                               children: <Widget>[
                                                 CupertinoButton(
-                                                  child: Text("إلغاء",
-                                                      style: TextStyle(
-                                                          color:
-                                                              Color(0xffA7A7A7),
-                                                          fontSize: 16)),
+                                                  child: Text(
+                                                    "إلغاء",
+                                                    style: GoogleFonts.poppins(
+                                                      fontSize: 17,
+                                                      color: Color(0xffA7A7A7),
+                                                    ),
+                                                  ),
                                                   onPressed: () {
                                                     Navigator.pop(context);
                                                   },
@@ -1375,10 +1389,10 @@ class _EditStudentState extends State<EditStudent>
                                                 ),
                                                 CupertinoButton(
                                                   child: Text("موافق",
-                                                      style: TextStyle(
+                                                      style: GoogleFonts.poppins(
+                                                          fontSize: 17,
                                                           color: const Color(
-                                                              0xff57d77a),
-                                                          fontSize: 16)),
+                                                              0xff57d77a))),
                                                   onPressed: () {
                                                     scrollController =
                                                         FixedExtentScrollController(

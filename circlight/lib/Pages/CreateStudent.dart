@@ -834,9 +834,9 @@ class _CreateStudentState extends State<CreateStudent>
                                     ),
                                     CupertinoButton(
                                       child: Text("موافق",
-                                          style: TextStyle(
-                                              color: const Color(0xff57d77a),
-                                              fontSize: 16)),
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 17,
+                                              color: const Color(0xff57d77a))),
                                       onPressed: () {
                                         scrollController =
                                             FixedExtentScrollController(
@@ -987,9 +987,9 @@ class _CreateStudentState extends State<CreateStudent>
                                     ),
                                     CupertinoButton(
                                       child: Text("موافق",
-                                          style: TextStyle(
-                                              color: const Color(0xff57d77a),
-                                              fontSize: 16)),
+                                          style: GoogleFonts.poppins(
+                                              fontSize: 17,
+                                              color: const Color(0xff57d77a))),
                                       onPressed: () {
                                         scrollController =
                                             FixedExtentScrollController(

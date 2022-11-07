@@ -381,6 +381,8 @@ class _Nav extends State<Nav> {
         children: [
           Positioned(
             right: 10,
+            left: 10,
+            bottom: 30,
             child: Align(
               alignment: Alignment(0, 0.92),
               child: FloatingActionButton(

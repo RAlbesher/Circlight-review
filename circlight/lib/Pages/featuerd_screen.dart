@@ -51,7 +51,8 @@ class Body extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 130, left: 20, right: 20),
+          padding:
+              const EdgeInsets.only(top: 90, left: 20, right: 20, bottom: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -193,8 +194,8 @@ class AppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // padding: const EdgeInsets.only(
-      //     top: 80, left: 270, right: 0), //here is مرحبًا ;
+      // padding:
+      //     const EdgeInsets.only(top: 0, left: 0, right: 0), //here is مرحبًا ;
 
       height: 300,
       width: double.infinity,
@@ -229,7 +230,7 @@ class AppBar extends StatelessWidget {
               Directionality(
                 textDirection: TextDirection.rtl,
                 child: Text(
-                  "مرحبًا !",
+                  "مرحبًا!",
                   textAlign: TextAlign.right,
                   style: TextStyle(
                       fontSize: 30, color: Color.fromARGB(255, 255, 255, 255)),
@@ -237,7 +238,7 @@ class AppBar extends StatelessWidget {
               ),
               SizedBox(
                 //Hereeee
-                width: 80,
+                width: 40,
               ),
 
               //CircleButton(

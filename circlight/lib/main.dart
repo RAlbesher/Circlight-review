@@ -85,14 +85,7 @@ class LoginUiApp extends StatelessWidget {
         ),
       ),
 
-      home: EditStudent(
-        Confirm: false,
-        DropDown: false,
-        Index: 1,
-        TheValue: "",
-        documentId: "4xWCPsIXJmFV4Qy8X2oo",
-        whichpag: 0,
-      ),
+      home: WelcomeScreen(),
     );
   }
 }
